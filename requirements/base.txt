@@ -10,3 +10,4 @@ redis
 whitenoise
 black
 flake8
+drf-spectacular

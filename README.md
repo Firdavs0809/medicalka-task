@@ -41,3 +41,8 @@ curl http://localhost:8000/api/feed/
 ## Background jobs
 
 Celery worker + beat + Redis handle async tasks. Unverified user cleanup runs on a schedule via Celery beat.
+
+
+## API Docs
+
+http://localhost:8000/api/docs/

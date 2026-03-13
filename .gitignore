@@ -18,3 +18,6 @@ media/
 
 # venv (kept outside repo but ignore anyway)
 venv/
+
+# celery beat last run file exclude
+app/celerybeat-schedule

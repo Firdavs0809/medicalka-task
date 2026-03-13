@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "django_filters",
     "rest_framework",
+    "drf_spectacular",
     "common",
     "apps.users",
     "apps.posts",
@@ -107,6 +108,7 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_PAGINATION_CLASS": "apps.posts.pagination.PostsPagination",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_FILTER_BACKENDS": (
         "django_filters.rest_framework.DjangoFilterBackend",
         "rest_framework.filters.SearchFilter",
@@ -131,3 +133,9 @@ CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = TIME_ZONE
+
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Medicalka API",
+    "VERSION": "1.0.0",
+}
