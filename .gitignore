@@ -1,0 +1,20 @@
+.env
+__pycache__/
+*.py[cod]
+*.sqlite3
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+*.log
+.DS_Store
+staticfiles/
+media/
+
+# Django
+*.mo
+*.pot
+
+# venv (kept outside repo but ignore anyway)
+venv/

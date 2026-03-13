@@ -1,0 +1,22 @@
+services:
+  app:
+    environment:
+      DEBUG: "True"
+      DJANGO_SETTINGS_MODULE: config.settings.local
+    volumes:
+      - ./app:/app
+    command: python manage.py runserver 0.0.0.0:8000
+
+  celery_worker:
+    environment:
+      DEBUG: "True"
+      DJANGO_SETTINGS_MODULE: config.settings.local
+    volumes:
+      - ./app:/app
+
+  celery_beat:
+    environment:
+      DEBUG: "True"
+      DJANGO_SETTINGS_MODULE: config.settings.local
+    volumes:
+      - ./app:/app
